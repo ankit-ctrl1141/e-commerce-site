@@ -47,7 +47,7 @@ const Slide = styled.div`
    height: 100vh;
    display: flex;
    align-items: center;
-   background-color: ${props => props.bg};  // "bg" is recieved as props
+   background-color: #${props => props.bg};  // "bg" is recieved as props
 `
 const ImgContainer = styled.div`
    height: 100%;
