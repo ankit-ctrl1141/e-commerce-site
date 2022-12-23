@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { mobile } from "../responsive"
 
 const Container = styled.div`
     flex: 1; //giving Container equal widths for each items
@@ -10,6 +11,8 @@ const Image = styled.img`
     width: 100%; // so that image can have 100% width inside the container
     height: 100%; // so that image can have 100% height inside the container
     object-fit: cover;  // property of img in CSS
+
+    ${mobile({height : "50vh"})}
 `
 const Info = styled.div`
     position: absolute; //its parent position should be relative then only it will work

@@ -1,8 +1,10 @@
-import { Instagram, LinkedIn, MailOutline, Phone, Room, Twitter, YouTube } from "@mui/icons-material"
+import { Instagram, IntegrationInstructions, LinkedIn, MailOutline, Phone, Room, Twitter, YouTube } from "@mui/icons-material"
 import styled from "styled-components"
+import { mobile } from "../responsive"
 
 const Container = styled.div`
     display: flex;
+    ${mobile({flexDirection : "column"})}
 `
 const Left = styled.div`
     flex: 1;
@@ -35,6 +37,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
     flex: 1;
     padding: 20px;
+    ${mobile({display: "none"})}
 `
 
 const Title = styled.h3`
@@ -56,6 +59,7 @@ const ListItem = styled.li`
 const Right = styled.div`
     flex: 1;
     padding: 20px;
+    ${mobile({backgroundColor: "#f3f1f1"})}
 `
 const ContactItem = styled.div`
     margin-bottom: 20px;
@@ -104,9 +108,11 @@ const Footer = () => {
             </Center>
             <Right>
                 <Title>Contact</Title>
-                <ContactItem> <Room style={{marginRight:"10px"}} /> 125, MJPRU, Bareilly, UP(India) </ContactItem>
+                <ContactItem> <IntegrationInstructions style={{marginRight:"10px"}} />Developed By: Ankit Kumar Verma</ContactItem>
+                <ContactItem> <Room style={{marginRight:"10px"}} /> Hostel-125, MJPRU, Bareilly, UP(India) </ContactItem>
                 <ContactItem> <Phone style={{marginRight:"10px"}}/> + 123456789 </ContactItem>
-                <ContactItem> <MailOutline style={{marginRight:"10px"}} /> contact@ankit.dev</ContactItem>
+                <ContactItem> <MailOutline style={{marginRight:"10px"}} /> contact@ankit08.dev</ContactItem>
+                
                 <Payment src = "https://i.ibb.co/Qfvn4z6/payment.png"/>
             </Right>
         </Container>

@@ -2,12 +2,15 @@ import React from "react"
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material"  //material icons
 import styled from "styled-components"
 import { sliderItems } from "../data.js"
+import { mobile } from "../responsive.js"
 const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
     position: relative;  // parent position should be relative to have its child position as absolute
     overflow: hidden;  // to hide the overflow of slides
+
+    ${mobile({display: "none"})}
     
 `
 
